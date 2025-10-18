@@ -1,16 +1,12 @@
-# DISABLED AUTO-RUN: Originally triggered on auto-triggers
-# Converted to manual execution only - 2025-10-18
-# Backup available at: e2e.yml.backup
 name: E2E Checks
 
 on:
-  workflow_dispatch:  # Manual trigger only
-#   workflow_call:
-#     inputs:
-#       node-version:
-#         description: Node.js version to use (e.g. 20.x)
-#         required: true
-#         type: string
+  workflow_call:
+    inputs:
+      node-version:
+        description: Node.js version to use (e.g. 20.x)
+        required: true
+        type: string
 
 jobs:
   e2e:

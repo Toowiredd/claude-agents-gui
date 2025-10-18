@@ -1,18 +1,14 @@
-# DISABLED AUTO-RUN: Originally triggered on auto-triggers
-# Converted to manual execution only - 2025-10-18
-# Backup available at: claude-code-review.yml.backup
 name: Claude Code Review
 
 on:
-  workflow_dispatch:  # Manual trigger only
-#   pull_request:
-#     types: [opened, synchronize]
-#     # Optional: Only run on specific file changes
-#     # paths:
-#     #   - "src/**/*.ts"
-#     #   - "src/**/*.tsx"
-#     #   - "src/**/*.js"
-#     #   - "src/**/*.jsx"
+  pull_request:
+    types: [opened, synchronize]
+    # Optional: Only run on specific file changes
+    # paths:
+    #   - "src/**/*.ts"
+    #   - "src/**/*.tsx"
+    #   - "src/**/*.js"
+    #   - "src/**/*.jsx"
 
 jobs:
   claude-review:
